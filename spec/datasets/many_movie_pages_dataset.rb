@@ -1,4 +1,4 @@
-class ManyMoviePagesScenario < Scenario::Base
+class ManyMoviePagesDataset < Dataset::Base
   uses :movie_helpers
   
   def load

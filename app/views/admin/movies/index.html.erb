@@ -18,10 +18,10 @@
       <tr class="node level-1 <%= "inactive" unless movie.visible %>">
         <td class="movie">
           <%= image('movies/movie') %>
-          <%= link_to movie.title, movie_edit_url(:id => movie.id) %>
+          <%= link_to movie.title, edit_admin_movie_path(:id => movie.id) %>
         </td>
         <td class="remove">
-          <%= link_to image('remove', :alt => 'Remove Movie'), movie_remove_url(:id => movie.id) %>
+          <%= link_to image('remove', :alt => 'Remove Movie'), admin_movie_path(:id => movie.id), :method => :delete %>
         </td>
       </tr>
     <% end %>

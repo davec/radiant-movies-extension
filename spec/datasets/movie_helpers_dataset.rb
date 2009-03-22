@@ -1,4 +1,4 @@
-class MovieHelpersScenario < Scenario::Base
+class MovieHelpersDataset < Dataset::Base
   uses :home_page
   
   helpers do

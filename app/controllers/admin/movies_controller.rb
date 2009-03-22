@@ -1,4 +1,4 @@
-class Admin::MovieController < Admin::AbstractModelController
+class Admin::MoviesController < Admin::ResourceController
   model_class Movie
   
   
@@ -18,7 +18,7 @@ class Admin::MovieController < Admin::AbstractModelController
         audio.position = i + 1
         audio.save
       end
-      redirect_to movie_index_url
+      redirect_to admin_movies_path
     end
   end
   

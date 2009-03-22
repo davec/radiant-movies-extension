@@ -5,7 +5,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 # what happens when the id passed is for a non-existant movie?
 
 describe MoviePage, "class find_by_url" do
-  scenario :movie_pages
+  dataset :movie_pages
   it "should find the movie listings page at /movies" do
     Page.find_by_url('/movies').should == pages(:movies)
   end

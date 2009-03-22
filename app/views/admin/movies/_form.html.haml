@@ -1,0 +1,21 @@
+- form_for [:admin, @movie] do |f|
+  .form-area
+    #movie_form_area
+      %p.title
+        %label{:for=>"movie_title"} Title
+        = f.text_field :title, :class => 'textbox', :maxlength => 255
+      %p.url
+        %label{:for=>"movie_url"} URL
+        = f.text_field :url, :class => 'textbox', :maxlength => 255
+      %p.description
+        %label{:for=>"movie_description"} Description
+        = f.text_area :description, :class => 'textbox', :maxlength => 255
+      .row
+        %p
+          %label{:for=>"movie_visible"} Status
+          = f.select :visible, [["Visible",1], ["Hidden",0]]
+  %p.buttons
+    = save_model_button(@movie)
+    = save_model_and_continue_editing_button(@movie)
+    or
+    = link_to 'Cancel', admin_movies_url

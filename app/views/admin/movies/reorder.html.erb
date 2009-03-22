@@ -24,14 +24,14 @@
 //]]>
 </script>
 
-<% form_tag movie_update_order_path do %>
+<% form_tag update_order_admin_movies_path do %>
 
   <div><%= hidden_field_tag "sort_order" %></div>
   
   <p class="buttons">
     <%= submit_tag "Finished", :class => 'button' %> 
     or 
-    <%= link_to 'Cancel', movie_index_path %>
+    <%= link_to 'Cancel', admin_movies_path %>
   </p>
 
 <% end %>

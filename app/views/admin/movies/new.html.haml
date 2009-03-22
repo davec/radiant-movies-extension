@@ -1,0 +1,7 @@
+- include_stylesheet 'admin/movies/movie'
+
+- render_region :main do |main|
+  - main.edit_header do
+    %h1 New Movie
+  - main.edit_form do
+    = render :partial => 'form'

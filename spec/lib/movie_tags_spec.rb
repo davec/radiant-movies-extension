@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 describe "Movie tags with no movie page" do
-  scenario :no_movie_page_scenario
+  dataset :no_movie_page_dataset
   it "should not find the url for the movies" do
     @page = pages(:home)
     @page.should render('<r:movies:each><r:title/></r:movies:each>').as('Debut')
@@ -10,7 +10,7 @@ describe "Movie tags with no movie page" do
 end
 
 describe "Movie tags with more than one movie page" do
-  scenario :many_movie_pages_scenario
+  dataset :many_movie_pages_dataset
   it "should not find the url for movies" do
     @page = pages(:home)
     @page.should render('<r:movies:each><r:title/></r:movies:each>').as('Debut')
@@ -19,7 +19,7 @@ describe "Movie tags with more than one movie page" do
 end
 
 describe "Movie tags with one movie page" do
-  scenario :movie_pages_scenario
+  dataset :movie_pages_dataset
   it "should render contents of r:movies" do
     @page = pages(:home)
     @page.should render('<r:movies>Whatever</r:movies>').as('Whatever')
