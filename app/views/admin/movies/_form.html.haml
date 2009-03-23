@@ -6,7 +6,7 @@
         = f.text_field :title, :class => 'textbox', :maxlength => 255
       %p.url
         %label{:for=>"movie_url"} URL
-        = f.text_field :url, :class => 'textbox'
+        = f.text_area :url, :class => 'textbox'
       %p.description
         %label{:for=>"movie_description"} Description
         = f.text_area :description, :class => 'textbox', :maxlength => 255
