@@ -12,7 +12,7 @@ class MovieHelpersDataset < Dataset::Base
         :title => title,
         :description => "Description of your movie here",
         :url => "linktoembedautubemovie",
-        :visible => 1
+        :visible => true
       }.merge(attributes)
     end
     
