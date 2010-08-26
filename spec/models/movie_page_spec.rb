@@ -88,7 +88,7 @@ describe MoviePage, "class find_by_url" do
   end
   
   it "should transfer context to previous movie with movie:previous" do
-    movie, predecessor = Movie.find(:all, :conditions => ["visible = ?", true], :order => "id desc")
+    movie, predecessor = Movie.find(:all, :conditions => ["visible = ?", true], :order => "position desc")
     virtual_movie_page = Page.find_by_url("/movies/#{movie.to_param}")
     virtual_movie_page.should render('<r:movie><r:previous><r:title/></r:previous></r:movie>').as(predecessor.title)
     virtual_movie_page.should render('<r:movie><r:previous><r:url/></r:previous></r:movie>').as(predecessor.url)
