@@ -9,6 +9,9 @@ describe MoviePage, "class find_by_url" do
   it "should find the movie listings page at /movies" do
     Page.find_by_url('/movies').should == pages(:movies)
   end
+  it "should not find the fubar page at /movies" do
+    Page.find_by_url('/fubar').should_not == pages(:movies)
+  end
   it "should find the virtual movie page at /movies/id-slug" do
     movie = Movie.find(:first, :conditions => ["visible = ?", true])
     Page.find_by_url("/movies/#{movie.to_param}").should == pages(:movies)

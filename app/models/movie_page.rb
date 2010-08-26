@@ -12,7 +12,7 @@ class MoviePage < Page
         super
       end
     else
-      self
+      super
     end
   end
   
